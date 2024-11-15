@@ -1,0 +1,119 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Montserrat';
+}
+.container{
+    max-width: 1320px;
+    margin:0 auto;
+    padding:0 15px;
+}
+ul li{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+    display: inline-block;
+}
+.d-flex{
+    display: flex;
+}
+.justify-content-between{
+    justify-content: space-between;
+}
+.align-items-center{
+    align-items: center;
+}
+
+/* LOADER */
+
+
+.loader{
+    width:70px;
+    height:70px;
+    border:10px dotted black;
+    border-radius: 50%;
+    animation: loader 2s infinite linear;
+}
+@keyframes loader {
+    100%{
+        transform: rotate(360deg);
+    }
+}
+.overlay{
+    background-color: rgb(177, 144, 109);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top:0;
+    left:0;
+    right:0;
+    bottom:0;
+    z-index: 9;
+}
+
+/* HEADER */
+
+header{
+    background-color: rgb(177, 144, 109);
+    position: relative;
+}
+header .logo{
+    color: black;
+    font-size: 35px;
+    padding: 15px 0;
+}
+nav ul li{
+    margin-left: 20px;
+}
+nav ul li a{
+    color:black;
+    font-size: 20px;
+}
+.toggle{
+    background-color:black;
+    color: rgb(177, 144, 109);
+    padding: 6px 8px;
+    border-radius: 7px;
+    font-size: 26px;
+    display: none;
+}
+.active{
+    background-color: rgb(177, 144, 109);
+    position: fixed;
+    top:0;
+    left:0;
+    right:0;
+    animation: slide-down 1s linear;
+}
+ @keyframes slide-down {
+            0%{
+                transform: translateY(-100%);
+            }
+        }
+
+/* MAIN */
+
+main p{
+    line-height: 30px;
+    text-align:justify;
+}
+
+/* BACK-TO-TOP */
+
+.back-to-top{
+    font-size: 20px;
+    text-decoration: none;
+    color:black;
+    background-color: rgb(177, 144, 109);
+    padding:12px 14px;
+    border-radius: 50%;
+    position: fixed;
+    bottom:20px;
+    right:20px;
+    display: none;
+}

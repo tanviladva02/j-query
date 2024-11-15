@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css">
+    <style>
+        *{
+            padding:0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        .container{
+            max-width: 1320px;
+            margin: 0 auto;
+            padding:0 15px;
+        }
+        .gallery{
+            column-count: 3;
+            column-gap: 10px;
+        }
+        img{
+            width: 100%;
+            object-fit: cover;
+            display: block;
+            margin-bottom: 10px;
+        }
+        .d-none{
+            display: none;
+        }
+        .main .card {
+            background: #ffffff;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 3px rgba(0, 0, 0, 0.24);
+            color: #333333;
+            border-radius: 2px;
+            }
+            .main .card-image {
+            background: #ffffff;
+            display: block;
+            padding-top: 70%;
+            position: relative;
+            width: 100%;
+            }
+            .main .card-image img {
+            display: block;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            }
+
+            @media only screen and (max-width: 600px) {
+            .main .container {
+                display: grid;
+                grid-template-columns: 1fr;
+                grid-gap: 1rem;
+            }
+            }
+    </style>
+</head>
+<body>
+    
+    <div class="container">
+        <div class="gallery">
+           <div class="card">
+                <div class="card-image">
+                    <a href="https://img.freepik.com/free-photo/painting-mountain-lake-with-mountain-background_188544-9126.jpg?size=626&ext=jpg&ga=GA1.1.87170709.1707868800&semt=sph" data-fancybox="gallery" >
+                        <img src="https://img.freepik.com/free-photo/painting-mountain-lake-with-mountain-background_188544-9126.jpg?size=626&ext=jpg&ga=GA1.1.87170709.1707868800&semt=sph" height="300">
+                    </a>
+                </div>
+           </div>
+            <div class="card">
+                <div class="card-image">
+                    <a href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQPh3bY8WieFS-lF8PyxffepwCBL0pAnY5RfQ&usqp=CAU" data-fancybox="gallery" >
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQPh3bY8WieFS-lF8PyxffepwCBL0pAnY5RfQ&usqp=CAU" height="400">
+                    </a>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-image">
+                    <a href="https://i0.wp.com/picjumbo.com/wp-content/uploads/beautiful-nature-mountain-scenery-with-flowers-free-photo.jpg?w=600&quality=80" data-fancybox="gallery" >
+                        <img src="https://i0.wp.com/picjumbo.com/wp-content/uploads/beautiful-nature-mountain-scenery-with-flowers-free-photo.jpg?w=600&quality=80" height="300">
+                    </a>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-image">
+                    <a href="https://wallpapers.com/images/hd/beautiful-nature-pictures-qjcss5r32ziry34t.jpg" data-fancybox="gallery" >
+                        <img src="https://wallpapers.com/images/hd/beautiful-nature-pictures-qjcss5r32ziry34t.jpg" height="400">
+                    </a>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-image">
+                    <a href="https://images.pexels.com/photos/534164/pexels-photo-534164.jpeg" data-fancybox="gallery" >
+                        <img src="https://images.pexels.com/photos/534164/pexels-photo-534164.jpeg" height="200">
+                    </a>
+                </div>
+            </div>
+           <div class="card">
+            <div class="card-image">
+                <a href="https://images.pexels.com/photos/17841930/pexels-photo-17841930/free-photo-of-view-of-a-mountain-reflecting-in-the-lake.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" data-fancybox="gallery" >
+                    <img src="https://images.pexels.com/photos/17841930/pexels-photo-17841930/free-photo-of-view-of-a-mountain-reflecting-in-the-lake.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" height="400">
+                </a>
+            </div>
+           </div>
+           <div class="card">
+            <div class="card-image">
+                <a href="https://burst.shopifycdn.com/photos/bridge-overlooking-steep-rocks-and-waterfall.jpg?width=1000&format=pjpg&exif=0&iptc=0" data-fancybox="gallery" >
+                    <img src="https://burst.shopifycdn.com/photos/bridge-overlooking-steep-rocks-and-waterfall.jpg?width=1000&format=pjpg&exif=0&iptc=0" height="400">
+                </a>
+            </div>
+           </div>
+           <div class="card">
+            <div class="card-image">
+                <a href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTwjH_V0LG5OlLHMhCm13deM-IkTksF6c15yyCSiYJDAdPZeLkAG3GvWOkGjfI7kTVDfwY&usqp=CAU" data-fancybox="gallery" >
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTwjH_V0LG5OlLHMhCm13deM-IkTksF6c15yyCSiYJDAdPZeLkAG3GvWOkGjfI7kTVDfwY&usqp=CAU" height="200">
+                </a>
+            </div>
+           </div>
+           <div class="card">
+            <div class="card-image">
+                <a href="https://i.pinimg.com/736x/26/72/c4/2672c4f9b59537c98b216afedf289835.jpg" data-fancybox="gallery" >
+                    <img src="https://i.pinimg.com/736x/26/72/c4/2672c4f9b59537c98b216afedf289835.jpg" height="400">
+                </a>
+            </div>
+           </div>
+            <div class="card">
+                <div class="card-image">
+                    <a href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRZn3UoX1Z0IANreKteP2ibt5WyNdaLNCGtY6qqiAIGX75vRm9XkM3IKfZjw_g4p1zmpaE&usqp=CAU" data-fancybox="gallery" >
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRZn3UoX1Z0IANreKteP2ibt5WyNdaLNCGtY6qqiAIGX75vRm9XkM3IKfZjw_g4p1zmpaE&usqp=CAU" class="d-none">
+                    </a>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-image">
+                    <a href="https://media.istockphoto.com/id/1403500817/photo/the-craggies-in-the-blue-ridge-mountains.jpg?s=612x612&w=0&k=20&c=N-pGA8OClRVDzRfj_9AqANnOaDS3devZWwrQNwZuDSk=" data-fancybox="gallery" >
+                        <img src="https://media.istockphoto.com/id/1403500817/photo/the-craggies-in-the-blue-ridge-mountains.jpg?s=612x612&w=0&k=20&c=N-pGA8OClRVDzRfj_9AqANnOaDS3devZWwrQNwZuDSk=" class="d-none">
+                    </a>
+                </div>
+            </div>
+           <div class="card">
+            <div class="card-image">
+                <a href="https://natureconservancy-h.assetsadobe.com/is/image/content/dam/tnc/nature/en/photos/Sunrise-over-Tillinghast-Pond.jpg?crop=0%2C0%2C2000%2C1100&wid=4000&hei=2200&scl=0.5" data-fancybox="gallery" >
+                    <img src="https://natureconservancy-h.assetsadobe.com/is/image/content/dam/tnc/nature/en/photos/Sunrise-over-Tillinghast-Pond.jpg?crop=0%2C0%2C2000%2C1100&wid=4000&hei=2200&scl=0.5" class="d-none">
+                </a>
+            </div>
+           </div>
+        </div>
+    </div>
+
+    <script src="js/jquery-3.7.1.min.js" type="text/javascript"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js"></script>
+    <script>
+        $('[data-fancybox="gallery"]').fancybox({
+        buttons: [
+            "slideShow",
+            "thumbs",
+            "zoom",
+            "fullScreen",
+            "share",
+            "close"
+        ],
+        loop: false,
+        protect: true
+        });
+
+    </script>
+</body>
+</html>

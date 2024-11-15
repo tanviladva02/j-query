@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        button{
+            padding:8px 14px;
+            margin:20px;
+            background-color: rgb(107, 174, 131);
+            color: white;
+        }
+        input{
+            padding:8px 12px;
+            margin:20px;
+        }
+        a{
+            display: inline-block;
+            text-decoration: none;
+            color:aquamarine;
+            background-color: black;
+            padding:10px 14px;
+            margin:20px;
+        }
+        .box,.box1,.box2{
+            width: 300px;
+            height: 300px;
+            background-color:rgb(107, 174, 131);
+            margin:20px;
+        }
+        .box1{
+            background-color: cornflowerblue;
+            display: none;
+        }
+        .box2{
+            background-color: rgb(3, 3, 4);
+        }
+    </style>    
+</head>
+<body>
+    <h2>Click:-</h2>
+    <button class="btn1">Click</button>
+
+    <h2>Double Click:-</h2>
+    <button class="btn2">Double Click</button>
+
+    <h2>Mouse Enter:-</h2>
+    <button class="btn3">Mouse Enter</button>
+
+    <h2>Mouse Leave:-</h2>
+    <button class="btn4">Mouse Leave</button>
+
+    <h2>Mouse Down:-</h2>
+    <button class="btn5">Mouse Down</button>
+
+    <h2>Mouse Up:-</h2>
+    <button class="btn6">Mouse Up</button>
+
+    <h2>Mouse Over:-</h2>
+    <button class="btn7">Mouse Over</button>
+   
+    <hr>
+    
+    <h2> keypress:-</h2>
+    <input type="text" class="input1">
+
+    <h2> Keydown:-</h2>
+    <input type="text" class="input2">
+
+    <h2> Keyup:-</h2>
+    <input type="text" class="input3">                     
+
+    <hr>
+
+    <a href="javascript:void(0)" class="hide">Hide</a>
+    <div class="box"></div>
+
+    <hr>
+
+    <a href="javascript:void(0)" class="toggle">toggle</a>
+    <div class="box2"></div>
+
+    <hr>
+
+    <a href="javascript:void(0)" class="show">show</a>
+    <div class="box1"></div>
+
+
+    <script src="js/jquery-3.7.1.min.js" type="text/javascript"></script>
+    <script>
+        $(".btn1").click(function(){
+            alert("Hello World");
+        });
+        $(".btn2").dblclick(function(){
+            alert("Hello World");
+        });
+        $(".btn3").mouseenter(function(){
+            alert("Hello World");
+        });
+        $(".btn4").mouseleave(function(){
+            alert("Hello World");
+        });
+        $(".btn5").mousedown(function(){
+            alert("Hello World");
+        });
+        $(".btn6").mouseup(function(){
+            alert("Hello World");
+        });
+        $(".btn7").mouseover(function(){
+            alert("Hello World");
+        });
+        $(".input1").keypress(function(){
+            alert("Hello World");
+        });
+        $(".input2").keydown(function(){
+            alert("Hello World");
+        });
+        $(".input3").keyup(function(){
+            alert("Hello World");
+        });
+        $(".hide").click(function(){
+            $(".box").hide();
+        });
+        $(".toggle").click(function(){
+            $(".box2").toggle();
+        });
+        $(".show").click(function(){
+            $(".box1").show();
+        });
+    </script>
+
+</body>
+</html>

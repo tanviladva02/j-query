@@ -1,0 +1,81 @@
+z<!DOCTYPE html>
+<html lang="en">
+<head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Document</title>
+     <style>
+          *{
+               padding:0;
+               margin:0;
+               box-sizing: border-box;
+          }
+          .container{
+               max-width: 1320px;
+               margin: 0 auto;
+               padding:0 15px;
+          }
+          .accordian-item h2{
+               background-color: rgb(242, 194, 185);
+               padding: 10px;
+               border-radius: 3px;
+               cursor: pointer;
+          }
+          .accordian-content {
+               border:1px solid rgb(242, 194, 185);
+                border-radius: 3px;
+               padding:15px;
+               margin-bottom:5px;
+               display: none;
+          }
+     </style>
+</head>
+<body>
+
+     <div class="container">
+          <div class="accordian">
+               <div class="accordian-item">
+                    <h2>Accordian-1</h2>
+                    <div class="accordian-content">
+                         <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Corrupti quisquam cum laudantium amet deleniti sunt ad accusamus illum eligendi minus in optio ex nobis eum voluptatum deserunt, dolore enim praesentium?Lorem ipsum, dolor sit amet consectetur adipisicing elit. Corrupti quisquam cum laudantium amet deleniti sunt ad
+                         accusamus illum eligendi minus in optio ex nobis eum voluptatum deserunt, dolore enim praesentium?Lorem ipsum</p>
+                    </div>
+               </div>
+               <div class="accordian-item">
+                    <h2>Accordian-2</h2>
+                    <div class="accordian-content">
+                         <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Corrupti quisquam cum laudantium amet deleniti
+                              sunt ad accusamus illum eligendi minus in optio ex nobis eum voluptatum deserunt, dolore enim
+                              praesentium?Lorem ipsum, dolor sit amet consectetur adipisicing elit. Corrupti quisquam cum laudantium
+                              amet deleniti sunt ad
+                              accusamus illum eligendi minus in optio ex nobis eum voluptatum deserunt, dolore enim praesentium?Lorem
+                              ipsum</p>
+                    </div>
+               </div>
+               <div class="accordian-item">
+                    <h2>Accordian-3</h2>
+                    <div class="accordian-content">
+                         <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Corrupti quisquam cum laudantium amet deleniti
+                              sunt ad accusamus illum eligendi minus in optio ex nobis eum voluptatum deserunt, dolore enim
+                              praesentium?Lorem ipsum, dolor sit amet consectetur adipisicing elit. Corrupti quisquam cum laudantium
+                              amet deleniti sunt ad
+                              accusamus illum eligendi minus in optio ex nobis eum voluptatum deserunt, dolore enim praesentium?Lorem
+                              ipsum</p>
+                    </div>
+               </div>
+          </div>
+     </div>
+     
+     
+
+     <script src="js/jquery-3.7.1.min.js" type="text/javascript"></script>
+     <script>
+          $(document).ready(function(){
+               $("h2").click(function(){
+                    $(this).parent(".accordian-item").find(".accordian-content").slideToggle();
+                    $(this).parent(".accordian-item").siblings(".accordian-item").children(".accordian-content").slideUp();
+               });
+          });
+     </script>
+</body>
+</html>

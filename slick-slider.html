@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/slick.css" type="text/css">
+    <link rel="stylesheet" href="css/slick-theme.css" type="text/css">
+    <style>
+        *{
+            padding:0;
+            margin:0;
+            box-sizing: border-box;
+        }
+        .container{
+            max-width: 1320px;
+            margin:0 auto;
+            padding:0 15px;
+        }
+        body{
+            background-color: aqua;
+        }
+        img{
+            object-fit: cover;
+        }
+        .slider-items{
+            margin:10px;
+        }
+        .slick-next,.slick-prev{
+            width:inherit;
+            height: inherit;
+        }
+        .slick-next::before,.slick-prev::before {
+            border:1px solid black;
+            padding:7px;
+            color:black;    
+        }
+        .slick-prev{
+            left:-50px;
+        }
+        .slick-next{
+            right:-50px;
+        }
+        .slick-dots li button:before{
+            font-size: 20px;
+        }
+    </style>
+</head>
+<body>
+    
+   <div class="container">
+    <div class="slider responsive">
+        <div class="slider-items">
+            <img src="https://images.immediate.co.uk/production/volatile/sites/3/2020/04/Tokyo-6d07db4.jpg?quality=90&fit=700,466" width="100%" height="250px">
+        </div>
+        <div class="slider-items">
+            <img src="https://dnm.nflximg.net/api/v6/BvVbc2Wxr2w6QuoANoSpJKEIWjQ/AAAAQftWo0DdCIzTgwD43hZ2JamB9lz9Rmvc7Wvyp8LlcacGgH7nhK6I7Ev4u4pnmgxx19fhLFX3e6u8zxKC8ixoUe6n0Ole7xsut2WV1H_zR72Znc9ti_sdZUKvsiSG0ENE3P_-aDeakv_lXBuJ4kaYXXaDOdY.jpg?r=6b8" width="100%" height="250px">
+        </div>
+        <div class="slider-items">
+            <img src="https://static.wikia.nocookie.net/money-heist/images/0/00/Alison_Parker.jpeg/revision/latest?cb=20191026110852" width="100%" height="250px">
+        </div>
+        <div class="slider-items">
+            <img src="https://www.iwmbuzz.com/wp-content/uploads/2022/01/5-reasons-we-fell-madly-in-love-with-alba-flores-from-money-heist-3.jpeg" width="100%" height="250px">
+        </div>
+        <div class="slider-items">
+            <img src="https://images.gmanews.tv/webpics/2020/04/640_jaime_lorente_2020_04_02_16_31_01.jpg" width="100%" height="250px">
+        </div>
+        <div class="slider-items">
+            <img src="https://a1cf74336522e87f135f-2f21ace9a6cf0052456644b80fa06d4f.ssl.cf2.rackcdn.com/images/characters/large/800/The-Professor.Money-Heist.webp" width="100%" height="250px">
+        </div>
+        <div class="slider-items">
+            <img src="https://images.immediate.co.uk/production/volatile/sites/3/2020/04/Tokyo-6d07db4.jpg?quality=90&fit=700,466" width="100%" height="250px">
+        </div>
+        <div class="slider-items">
+            <img src="https://dnm.nflximg.net/api/v6/BvVbc2Wxr2w6QuoANoSpJKEIWjQ/AAAAQftWo0DdCIzTgwD43hZ2JamB9lz9Rmvc7Wvyp8LlcacGgH7nhK6I7Ev4u4pnmgxx19fhLFX3e6u8zxKC8ixoUe6n0Ole7xsut2WV1H_zR72Znc9ti_sdZUKvsiSG0ENE3P_-aDeakv_lXBuJ4kaYXXaDOdY.jpg?r=6b8" width="100%" height="250px">
+        </div>
+        <div class="slider-items">
+            <img src="https://static.wikia.nocookie.net/money-heist/images/0/00/Alison_Parker.jpeg/revision/latest?cb=20191026110852" width="100%" height="250px">
+        </div>
+        <div class="slider-items">
+            <img src="https://www.iwmbuzz.com/wp-content/uploads/2022/01/5-reasons-we-fell-madly-in-love-with-alba-flores-from-money-heist-3.jpeg" width="100%" height="250px">
+        </div>
+        <div class="slider-items">
+            <img src="https://images.gmanews.tv/webpics/2020/04/640_jaime_lorente_2020_04_02_16_31_01.jpg" width="100%" height="250px">
+        </div>
+        <div class="slider-items">
+            <img src="https://a1cf74336522e87f135f-2f21ace9a6cf0052456644b80fa06d4f.ssl.cf2.rackcdn.com/images/characters/large/800/The-Professor.Money-Heist.webp" width="100%" height="250px">
+        </div>
+    </div>
+   </div>
+
+
+    <script src="js/jquery-3.7.1.min.js" type="text/javascript"></script>
+    <script src="js/slick.min.js" type="text/javascript"></script>
+   <script>
+        $('.responsive').slick({
+        dots: true,
+        infinite: true,
+        speed: 300,
+        slidesToShow: 3,
+        slidesToScroll: 1,
+        responsive: [
+            {
+            breakpoint: 1024,
+            settings: {
+                slidesToShow: 3,
+                slidesToScroll: 3,
+                infinite: true,
+                dots: true
+            }
+            },
+            {
+            breakpoint: 600,
+            settings: {
+                slidesToShow: 2,
+                slidesToScroll: 2
+            }
+            },
+            {
+            breakpoint: 480,
+            settings: {
+                slidesToShow: 1,
+                slidesToScroll: 1
+            }
+            }
+        ]
+        });
+   </script>
+
+</body>
+</html>

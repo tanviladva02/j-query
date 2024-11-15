@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            padding:0;
+            margin: 0;
+            box-sizing: border-box;
+            cursor:none;
+        }
+        .container{
+            max-width: 1320px;
+            margin:0 auto;
+            padding:0 15px;
+        }
+        .d-flex{
+            display:flex;
+        }
+        img{
+            object-fit: cover;
+            border-radius: 50px;
+            transition: 0.4s;
+            width:200px;
+            height: 700px;
+            display: block;
+            margin-right: 20px;
+        }
+        .active{
+            width: 500px!important;
+        }
+
+        .cursor {
+        width: 50px;
+        height: 50px;
+        border: 1px solid black;
+        transition: all 200ms ease-out;
+        position: fixed;
+        pointer-events: none;
+        }
+
+        .cursor2 {
+        width: 20px;
+        height: 20px;
+        border-radius: 100%;
+        background-color: black;
+        opacity: .3;
+        position: fixed;
+        transform: translate(-50%, -50%);
+        pointer-events: none;
+        transition: width .3s, height .3s, opacity .3s;
+        }
+
+    </style>
+</head>
+<body>
+
+      <div class="cursor"></div>
+      <div class="cursor2"></div>
+    
+        <div class="container">
+            <div class="d-flex">
+                <div class="img-main">
+                    <img src="img/img1.jpg" alt="img1" title="img1">
+                </div>   
+                <div class="img-main">
+                    <img src="img/img2.avif" alt="img2" title="img2">
+                </div>
+                <div class="img-main">
+                    <img src="img/img3.jpg" alt="img3" title="img3">
+                </div>
+                <div class="img-main">
+                    <img src="img/img4.webp" alt="img4" title="img4">
+                </div>
+            </div>
+        </div>
+
+    <script src="js/jquery-3.7.1.min.js" type="text/javascript"></script>
+    <script>
+        $(document).ready(function(){
+            $("img").click(function(){
+                $(this).toggleClass("active");
+                $(this).parent(".img-main").siblings(".img-main").children("img").removeClass("active");
+            });
+        });
+
+            var cursor = document.querySelector('.cursor');
+            var cursorinner = document.querySelector('.cursor2');
+            var a = document.querySelectorAll('a');
+
+            document.addEventListener('mousemove', function(e){
+            var x = e.clientX;
+            var y = e.clientY;
+            cursor.style.transform = `translate3d(calc(${e.clientX}px - 50%), calc(${e.clientY}px - 50%), 0)`
+            });
+
+            document.addEventListener('mousemove', function(e){
+            var x = e.clientX;
+            var y = e.clientY;
+            cursorinner.style.left = x + 'px';
+            cursorinner.style.top = y + 'px';
+            });
+
+            document.addEventListener('mousedown', function(){
+            cursor.classList.add('click');
+            cursorinner.classList.add('cursorinnerhover')
+            });
+
+            document.addEventListener('mouseup', function(){
+            cursor.classList.remove('click')
+            cursorinner.classList.remove('cursorinnerhover')
+            });
+
+            a.forEach(item => {
+            item.addEventListener('mouseover', () => {
+                cursor.classList.add('hover');
+            });
+            item.addEventListener('mouseleave', () => {
+                cursor.classList.remove('hover');
+            });
+            })
+    </script>
+</body>
+</html>

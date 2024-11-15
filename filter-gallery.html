@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <style>
+       * {
+          box-sizing: border-box;
+          margin: 0;
+          padding: 0;
+         }
+
+        a {
+          text-decoration: none;
+          }
+
+        .text-center{
+           text-align: center;
+          }
+
+        .title {
+          font-size: 46px;
+          font-weight: 700;
+          color: #f44336;
+        } 
+
+        .filter {
+          text-align: center;
+          max-width: 1050px;
+          margin: auto;
+        }
+
+        .btn {
+          padding: 10px 20px;
+          margin: 5px 4px 4px 0;
+          display: inline-block;
+          color: #003;
+          background: #eee;
+          border: 1px solid #f44336;
+          transition: all 0.4s;
+          border-radius: 10px;
+          font-size: 16px;
+          font-weight: 500;
+        }
+
+        .btn:hover,.btn-active {
+          background: #f44336;
+          color: #fff;
+          transform: translateY(3px);
+        }
+
+        .gallery {
+          display: flex;
+          justify-content: center;
+          width: fit-content;
+          max-width: 1320px;
+          flex-wrap: wrap;
+          margin: 25px auto;
+        }
+
+      .gallery img {
+          width: 200px;
+          height: 220px;
+          object-fit: cover;
+          transition: 0.3s ease-in-out;
+          border-radius: 12px;
+          overflow: hidden;
+          margin: 10px 10px;
+        }
+
+        .gallery img:hover {
+          transform: scale(1.1);
+         }
+
+        .sets .hide,
+        .sets .pophide {
+          width: 0%;
+          opacity: 0;
+         }
+
+        .closeBtn {
+          position: absolute;
+          font-size: 22px;
+          font-weight: 500;
+          right: 25px;
+          top: 25px;
+          color: white;
+          transition: 0.5s linear;
+          padding: 8px 40px;
+          border-radius: 25px;
+          background: red;
+          outline-offset: -6px;
+          outline: 2px solid #fff;
+          }
+
+        .closeBtn:hover {
+          cursor: pointer;
+          background: white;
+          color: black;
+          outline: 2px solid #000;
+        }
+
+        .openDiv {
+          width: 100%;
+          height: 100vh;
+          background: #000000e7;
+          position: fixed;
+          top: 0;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          left: 0;
+          z-index: 9999;
+        }
+
+        .imgPreview {
+          width: 70%;
+          object-fit: scale-down;
+          max-height: 40vw;
+          height: auto;
+         }
+
+        .prevButton,
+        .nextButton {
+          transition: 1s linear;
+          padding: 10px 35px;
+          font-size: 18px;
+          border: none;
+          color: white;
+          background: #0005;
+          border-radius: 10px;
+          border: 1px solid white;
+          margin: 10px;
+        }
+
+        @media (max-width: 1199px) {
+         .section-padding {
+           padding-top: 70px;
+            }
+          }
+        @media (max-width: 991px) {
+          .section-padding {
+            padding-top: 50px;
+             }
+            }
+        @media (max-width: 767px) {
+          .title {
+            font-size: 36px;
+            }
+        .gallery img {
+          margin: 8px 8px;
+          width: 175px;
+        }
+        .closeBtn {
+          padding: 6px 25px;
+        }
+        .prevButton,
+        .nextButton {
+          font-size: 18px;
+          padding: 8px 25px;
+          }
+        }
+
+        @media (max-width: 540px) {
+          .section-padding {
+            padding-top: 30px;
+          }
+              
+          .gallery img {
+            margin: 8px 6px;
+            width: 155px;
+           }
+
+          .closeBtn {
+            font-size: 18px;
+            border-radius: 15px;
+           }
+           .prevButton,
+           .nextButton {
+             font-size: 18px;
+             padding: 6px 20px;
+             border-radius: 10px;
+             margin: 5px;
+           }
+
+          .imgPreview {
+            width: 90%;
+            max-height: 50vh;
+            height: auto;
+          }
+
+          }
+
+          p
+          {
+                padding:10px 0;
+          }
+    </style>
+</head>
+<body>
+    <div class="section-padding gallery-section" id="gallery">
+        <div class="container">
+          <div class="text-center">
+            <h2 class="title">Our Gallery</h2>
+            <p>Some Random Photos Lorem ipsum, dolor sit.</p>
+          </div>
+
+          <div id="btncontainer" class="filter">
+            <a class="btn btn-active" href="#all">ALL</a>
+            <a class="btn" href="#Bollywood">Bollywood</a>
+            <a class="btn" href="#Hollywood">Hollywood</a>
+            <a class="btn" href="#tv">TV Shows</a>
+          </div>
+
+          <div class="gallery sets">
+            <a class="all Bollywood"><img src="https://iili.io/y7W4t4.md.webp"/></a>
+
+            <a class="all Bollywood"><img src="https://i.redd.it/a90376enwvg91.jpg"/></a>
+
+            <a class="all Bollywood"><img src="https://iili.io/y7waOg.md.jpg"/></a>
+            
+            <a class="all Bollywood"><img src="https://iili.io/y7WrNf.webp"/></a>
+            
+            <a class="all Hollywood"><img src="https://i.redd.it/wh6hbexev2v91.jpg"/></a>
+            
+            <a class="all Hollywood"><img src="https://i.redd.it/4b6s83hss9p91.jpg"/></a>
+            
+            <a class="all tv"><img src="https://i.redd.it/2s7w09k01ol91.jpg"/></a>
+            <a class="all tv"><img src="https://i.redd.it/2s7w09k01ol91.jpg"/></a>
+            
+          </div>
+        </div>
+      </div>
+
+      <script src="js/jquery-3.7.1.min.js" type="text/javascript"></script>
+      <script>
+            $(".filter a").click(function (e) {
+        e.preventDefault();
+        var a = $(this).attr("href");
+        a = a.substr(1);
+        $(".sets a").each(function () {
+          if (!$(this).hasClass(a) && a != "") $(this).addClass("hide");
+          else $(this).removeClass("hide");
+        });
+
+          var btnContainer = document.getElementById("btncontainer");
+          var btns = btnContainer.getElementsByClassName("btn");
+          for (var i = 0; i < btns.length; i++) {
+              var current = document.getElementsByClassName("btn-active");
+              current[0].className = current[0].className.replace(" btn-active", "");
+              this.className += " btn-active";
+
+          }
+      });
+
+
+      let imgs = document.querySelectorAll("img");
+            let count;
+            imgs.forEach((img, index) => {
+              img.addEventListener("click", function (e) {
+                if (e.target == this) {
+                  count = index;
+                  let openDiv = document.createElement("div");
+                  let imgPreview = document.createElement("img");
+                  let butonsSection = document.createElement("div");
+                  butonsSection.classList.add("butonsSection");
+                  let closeBtn = document.createElement("button");
+                  let nextBtn = document.createElement("button");
+                  let prevButton = document.createElement("button");
+                  prevButton.innerText = "Previous";
+                  nextBtn.innerText = "Next";
+
+                  nextBtn.classList.add("nextButton");
+                  prevButton.classList.add("prevButton");
+                  nextBtn.addEventListener("click", function () {
+                    if (count >= imgs.length - 1) {
+                      count = 0;
+                    } else {
+                      count++;
+                    }
+                    imgPreview.src = imgs[count].src;
+                  });
+
+                  prevButton.addEventListener("click", function () {
+                    if (count === 0) {
+                      count = imgs.length - 1;
+                    } else {
+                      count--;
+                    }
+
+                    imgPreview.src = imgs[count].src;
+                  });
+
+                  closeBtn.classList.add("closeBtn");
+                  closeBtn.innerText = "Close";
+                  closeBtn.addEventListener("click", function () {
+                    openDiv.remove();
+                  });
+
+                  imgPreview.classList.add("imgPreview");
+                  imgPreview.src = this.src;
+
+                  butonsSection.append(prevButton, nextBtn);
+                  openDiv.append(imgPreview, butonsSection, closeBtn);
+
+                  openDiv.classList.add("openDiv");
+
+                  document.querySelector("body").append(openDiv);
+                }
+              });
+            });
+      </script>
+</body>
+</html>

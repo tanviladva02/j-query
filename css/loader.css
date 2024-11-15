@@ -1,0 +1,28 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+.loader{
+    width:70px;
+    height:70px;
+    border:10px dotted white;
+    border-radius: 50%;
+    /* animation: loader 2s infinite linear; */
+}
+/* @keyframes loader {
+    100%{
+        transform: rotate(360deg);
+    }
+} */
+.overlay{
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top:0;
+    left:0;
+    right:0;
+    bottom:0;
+}

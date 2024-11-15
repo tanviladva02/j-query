@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        html,body {
+            height: 100%;
+        }
+        body {
+        background: #120d0b;
+        overflow: hidden;
+        display: flex;
+        align-items: center;
+        }
+
+        .slider {
+        margin: 0 auto;
+        width: 100% !important;
+        height: 100% !important;
+        }
+        .slider:not(.zoom) .item {
+        transition: all 900ms ease-in-out, opacity 400ms linear 0ms;
+        opacity: 0;
+        }
+        .slider:not(.zoom) .item.active {
+        width: 100% !important;
+        height: 100% !important;
+        line-height: 100%;
+        position: relative;
+        display: flex;
+        opacity: 1;
+        pointer-events: all;
+        }
+        .slider:not(.zoom) .item.active span {
+        top: 0;
+        transform: scale(1);
+        }
+        .slider:not(.zoom) .item.active .btn {
+        transform: scale(1);
+        height: 44px;
+        }
+        .slider:not(.zoom) .item.active .btn span {
+        top: 16px;
+        }
+        .slider:not(.zoom) .item.item1 {
+        transform: rotateY(0deg) translateZ(0);
+        }
+        .slider:not(.zoom) .item.item2 {
+        transform: rotateY(120deg) translateZ(0);
+        }
+        .slider:not(.zoom) .item.item3 {
+        transform: rotateY(240deg) translateZ(0);
+        }
+        .slider.zoom .item {
+        transition: all 900ms ease-in-out, opacity 300ms linear 500ms;
+        opacity: 0.5;
+        }
+
+        .wrapper {
+        height: 100%;
+        width: 100%;
+        position: absolute;
+        transform-style: preserve-3d;
+        transition: transform 900ms ease-in-out;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        will-change: transform;
+        }
+
+        .item {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: absolute;
+        width: 39%;
+        height: 50%;
+        line-height: 50%;
+        color: #fff;
+        background-repeat: no-repeat;
+        background-size: cover !important;
+        background-position: center;
+        transition: all 900ms ease-in-out;
+        transform-origin: center;
+        pointer-events: none;
+        will-change: transform;
+        }
+        .item.item1 {
+        transform: rotateY(0deg) translateZ(500px);
+        background-position: 50% 0%;
+        }
+        .item.item1.active {
+        transform: rotateY(0deg) translateZ(250px);
+        opacity: 1;
+        }
+        .item.item2 {
+        transform: rotateY(120deg) translateZ(500px);
+        }
+        .item.item2.active {
+        transform: rotateY(120deg) translateZ(250px);
+        opacity: 1;
+        }
+        .item.item3 {
+        transform: rotateY(240deg) translateZ(550px);
+        }
+        .item.item3.active {
+        transform: rotateY(240deg) translateZ(250px);
+        opacity: 1;
+        }
+        .item__info {
+        text-align: center;
+        text-transform: uppercase;
+        font-weight: bold;
+        will-change: transform;
+        }
+        .item__year {
+        font-size: 30px;
+        letter-spacing: 3px;
+        margin-bottom: 35px;
+        overflow: hidden;
+        line-height: 30px;
+        will-change: transform;
+        }
+        .item__year span {
+        position: relative;
+        top: 27px;
+        transition: all 900ms linear;
+        display: inline-block;
+        transform: scale(0.7);
+        white-space: nowrap;
+        will-change: transform;
+        }
+        .item__name {
+        font-size: 55px;
+        letter-spacing: 3px;
+        margin-bottom: 62px;
+        overflow: hidden;
+        line-height: 55px;
+        will-change: transform;
+        }
+        .item__name span {
+        position: relative;
+        top: 48px;
+        transition: all 900ms ease-in-out;
+        display: inline-block;
+        transform: scale(0.7);
+        white-space: nowrap;
+        will-change: transform;
+        }
+
+        .btn {
+        background: #fff;
+        color: #120d0b;
+        padding: 0 33px;
+        text-decoration: none;
+        display: inline-block;
+        transform: scale(0.7);
+        height: 0;
+        position: relative;
+        overflow: hidden;
+        transition: all 900ms ease-in-out;
+        will-change: transform;
+        }
+        .btn span {
+        position: relative;
+        top: 16px;
+        will-change: transform;
+        }
+
+        .arrow {
+        background: #8e2037;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        cursor: pointer;
+        border-radius: 50%;
+        width: 70px;
+        height: 70px;
+        transition: all 0.1s ease-in-out;
+        transform-origin: 50% 50%;
+        will-change: transform;
+        }
+        .arrow:hover {
+        transform: translateY(-50%) scale(1.1);
+        }
+        .arrow.arrow-next {
+        right: 5em;
+        background: url("https://alikinvv.github.io/3d-carousel/build/img/arrow-right.svg") no-repeat center #8e2037;
+        background-size: 38px !important;
+        }
+        .arrow.arrow-prev {
+        left: 5em;
+        background: url("https://alikinvv.github.io/3d-carousel/build/img/arrow-left.svg") no-repeat center #8e2037;
+        background-size: 38px !important;
+        }
+    </style>
+</head>
+<body>
+    
+    <div class="slider">
+        <div class="wrapper">
+            <div style="background-image: url('https://alikinvv.github.io/3d-carousel/build/img/slide2.jpg')" class="item item1 active">
+                <div class="item__info">
+                    <p class="item__year"><span>1483 - 1484</span></p>
+                    <p class="item__name"><span>BIRH OF VENUS</span></p>
+                    <a href="javascript:void(0)" class="btn"><span>Discover more</span></a>
+                </div>
+            </div>
+            <div style="background-image: url('https://alikinvv.github.io/3d-carousel/build/img/slide1.jpg')" class="item item2">
+                <div class="item__info">
+                    <p class="item__year"><span>1481 - 1484</span></p>
+                    <p class="item__name"><span>BIRH OF VENUS</span></p>
+                    <a href="javascript:void(0)" class="btn"><span>Discover more</span></a>
+                </div>
+            </div>
+            <div style="background-image: url('https://alikinvv.github.io/3d-carousel/build/img/slide3.jpg')" class="item item3">
+                <div class="item__info">
+                    <p class="item__year"><span>1500 - 1501</span></p>
+                    <p class="item__name"><span>THE STORY OF VIRGINIA</span></p>
+                    <a href="javascript:void(0)" class="btn"><span>Discover more</span></a>
+                </div>
+            </div>
+        </div>
+    
+        <div class="arrow arrow-next"></div>
+        <div class="arrow arrow-prev"></div>
+    </div>
+
+
+    <script src="js/jquery-3.7.1.min.js" type="text/javascript"></script>
+    <script>
+        let slider = document.querySelector('.slider');
+        let wrapper = document.querySelector('.wrapper');
+        let next = document.querySelector('.arrow-next');
+        let prev = document.querySelector('.arrow-prev');
+        let item = document.querySelectorAll('.item');
+        let currdeg  = 0;
+        let active = 0;
+
+        next.addEventListener('click', () => {
+            slider.classList.toggle('zoom');
+
+            currdeg = currdeg - 120;
+
+            if (active === item.length - 1) {
+                active = 0;
+            } else {
+                active++;
+            }
+
+            toggle();
+        });
+
+        prev.addEventListener('click', () => {
+            slider.classList.toggle('zoom');
+
+            currdeg = currdeg + 120;
+
+            if (active === 0) {
+                active = item.length - 1;
+            } else {
+                active--;
+            }
+
+            toggle();
+        });
+
+        let toggle = () => {
+            setTimeout(() => {
+                for (let i = 0; i < item.length; i++) {
+                    item[i].classList.remove('active');
+                }
+
+                item[active].classList.add('active')
+                wrapper.style.transform = 'rotateY(' + currdeg + 'deg)';
+            }, 900);
+
+            setTimeout(() => {
+                slider.classList.toggle('zoom');
+            }, 1900);
+        }
+
+    </script>
+
+</body>
+</html>

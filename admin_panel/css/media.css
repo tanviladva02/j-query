@@ -1,0 +1,166 @@
+/* XL */
+@media(max-width:1399px)
+{
+	
+	
+}
+/* LG */
+@media(max-width:1199px)
+{
+	.col-lg-6{
+        width:50%;
+    }
+    .col-lg-12{
+        width:100%;
+    }
+
+    .order-lg-1 {
+        order: 1;
+    }
+
+    .order-lg-2 {
+        order: 2;
+    }
+
+    .order-lg-3 {
+        order: 3;
+    }
+
+    .map-container{
+        margin:25px 0 0 0;
+        height: 500px !important;
+    }
+    .wrapper{
+        margin:0 25px 25px 0;
+    }
+   
+}
+
+/* MD */
+@media(max-width:991px)
+{
+
+    .col-md-12{
+        width:100%;
+    }
+    .col-md-6{
+        width:50%;
+    }
+    .d-md-none{
+        display: none;
+    }
+    aside{
+        transform: translateX(-100%);
+    }
+
+    /* ASIDE */
+
+    aside{
+        transform: translateX(-100%)!important;
+    }
+    header,main,footer{
+        width:100%!important;
+    }
+    .aside-click{
+        transform:translateX(0%)!important;
+        width: 25%;
+    }
+    .toggle-click{
+        width:75%!important;
+    }
+
+    #chart{
+        margin-bottom: 25px;
+    }
+
+    .col-6:nth-child(2) .analytics-box {
+        margin-right: 0!important;
+    }
+
+    .col-6:last-child .analytics-box {
+        margin-right: 0!important;
+    }
+
+    .latest-pr{
+        margin-right:0;
+    }
+
+}
+/* SM */
+@media(max-width:767px)
+{
+    .col-sm-12{
+        width:100%;
+    }
+    .d-sm-block{
+        display: none;
+    }
+    .map-container{
+        height: 400px !important;
+    }
+    .wrapper{
+        margin-right:0!important;
+    }
+    .container-calendar{
+        margin:0 0 0 0;
+        height: 370px !important;
+        overflow: hidden;
+        width:100%!important;
+    }
+    #chart2{
+        margin-top: 25px;
+    }
+}
+
+/* XS */
+@media(max-width:575px)
+{
+    aside{
+        transform: translateX(-100%)!important;
+    }
+    header,main,footer{
+        width:100%!important;
+    }
+    .aside-click{
+        transform:translateX(0%)!important;
+        width: 35%;
+    }
+    .toggle-click{
+        width:65%!important;
+    }
+
+    .col-xs-12{
+        width:100%;
+    }
+    .d-xs-none{
+        display:none!important;
+    }
+    .d-xs-block{
+        display:block!important;
+    }
+    .text-xs-center{
+        text-align: center;
+    }
+    main{
+        padding:10px;
+    }
+    
+
+	/* ASIDE */
+
+    .analytics-box{
+        margin-right:0;
+    }
+
+    .copyright{
+        padding-right:0;  
+        padding-left:0;  
+    }
+    .copyright ul li:first-child a{
+        margin-bottom: 15px;
+    }
+    .copyright ul li:last-child{
+        text-align: center;
+    }
+
+}
